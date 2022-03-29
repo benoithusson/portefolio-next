@@ -11,8 +11,8 @@ import {
 export default function Navbar() {
   return (
     <Nav>
-      <BrandLogoContainer bgColor="orange">Logo</BrandLogoContainer>
-      <NavItemsContainer bgColor="salmon">
+      <BrandLogoContainer>Logo</BrandLogoContainer>
+      <NavItemsContainer>
         <Link href="/">
           <StyledLink>Lien 1</StyledLink>
         </Link>
@@ -26,7 +26,7 @@ export default function Navbar() {
           <StyledLink>Lien 4</StyledLink>
         </Link>
       </NavItemsContainer>
-      <MenuMobileIcon bgColor="greenyellow">Icon Menu</MenuMobileIcon>
+      <MenuMobileIcon>Icon Menu</MenuMobileIcon>
     </Nav>
   );
 }
