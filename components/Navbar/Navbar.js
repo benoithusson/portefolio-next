@@ -8,12 +8,14 @@ import {
   NavItemsContainer,
   StyledLink,
   MenuMobileIcon,
+  Contacts
 } from "../../styles/components/Navbar.styled";
 
-// IDEE SKILLS : Créér API + petit jeu avec random skills
+// IDEE PAGE SKILLS : Créér API avec Next + petit jeu avec random skills
 // Ou prendre modéle jeu formation et faire bouger les logos des skills
 
 export default function Navbar() {
+
   const defaultOptions = {
     loop: true,
     autoplay: false,
@@ -25,21 +27,24 @@ export default function Navbar() {
 
   return (
     <Nav>
-      <BrandLogoContainer>Benoît</BrandLogoContainer>
+      <BrandLogoContainer>
+        Benoît
+        <span>Mes coordonnées</span>
+      </BrandLogoContainer>
       <NavItemsContainer>
-        <Link href="/home">
+        <Link href="/">
           <StyledLink>Home</StyledLink>
         </Link>
-        <Link href="/">
+        <Link href="/about">
           <StyledLink>About</StyledLink>
         </Link>
-        <Link href="/">
+        <Link href="/skills">
           <StyledLink>Skills</StyledLink>
         </Link>
-        <Link href="/">
+        <Link href="/portefolio">
           <StyledLink>Portefolio</StyledLink>
         </Link>
-        <Link href="/">
+        <Link href="/contact-me">
           <StyledLink>Contact me</StyledLink>
         </Link>
         <Link href="/">

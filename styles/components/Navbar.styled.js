@@ -18,6 +18,7 @@ export const BrandLogoContainer = styled.div`
   width: 40%;
   height: 100%;
   background-color: red;
+  transition: all 0.4s ease;
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
@@ -47,20 +48,45 @@ export const MenuMobileIcon = styled.div`
 `;
 
 export const StyledLink = styled.a`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   margin: 0 20px 0 20px;
   text-decoration: none;
-  color: black;
-  border-radius: 0;
-  transition: all 0.4s ease;
-  &:hover {
-    color: white;
-    background-color: rgba(0, 0, 128, 0.7);
-    border-radius: 50%;
-    cursor: pointer;
+  position: relative;
+  background-color: none;
+  transition: background-color 0.3s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 128);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  &:hover::before {
+    transform: scaleX(1);
   }
 `;
+
+export const Contacts = styled.span`
+  width: 100%;
+  background-color: green;
+  display: none;
+  transform: scaleX(0);
+  transition: all 0.4s ease;
+  :hover {
+    transform: scaleX(50%);
+    display: block;
+  }
+`;
+// Quand je fais hover sur BrandLogoContainer, je veux activer style hover dans Contacts
+// Mais avec stled components, comment cibler un autre composant dans un comppsant?
+// Puis je utiliser du SCSS ?
+// Déclencher apparaition composant en cliquant sur un autre composant
