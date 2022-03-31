@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
     body {
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Ubuntu', 'Source Sans Pro', sans-serif;
         background-color: skyblue;
     }
 `;

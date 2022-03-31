@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Lottie from "react-lottie";
+import burgerMenu from "../../assets/lotties/burgerMenu.json";
 import {
   Nav,
   BrandLogoContainer,
@@ -8,25 +10,46 @@ import {
   MenuMobileIcon,
 } from "../../styles/components/Navbar.styled";
 
+// IDEE SKILLS : Créér API + petit jeu avec random skills
+// Ou prendre modéle jeu formation et faire bouger les logos des skills
+
 export default function Navbar() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: false,
+    animationData: burgerMenu,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <Nav>
-      <BrandLogoContainer>Logo</BrandLogoContainer>
+      <BrandLogoContainer>Benoît</BrandLogoContainer>
       <NavItemsContainer>
-        <Link href="/">
-          <StyledLink>Lien 1</StyledLink>
+        <Link href="/home">
+          <StyledLink>Home</StyledLink>
         </Link>
         <Link href="/">
-          <StyledLink>Lien 2</StyledLink>
+          <StyledLink>About</StyledLink>
         </Link>
         <Link href="/">
-          <StyledLink>Lien 3</StyledLink>
+          <StyledLink>Skills</StyledLink>
         </Link>
         <Link href="/">
-          <StyledLink>Lien 4</StyledLink>
+          <StyledLink>Portefolio</StyledLink>
+        </Link>
+        <Link href="/">
+          <StyledLink>Contact me</StyledLink>
+        </Link>
+        <Link href="/">
+          <StyledLink>Dark Mode</StyledLink>
         </Link>
       </NavItemsContainer>
-      <MenuMobileIcon>Icon Menu</MenuMobileIcon>
+      <MenuMobileIcon>
+        {/* <Lottie options={defaultOptions} width={50} height={50} /> */}
+        Icon
+      </MenuMobileIcon>
     </Nav>
   );
 }
