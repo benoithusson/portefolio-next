@@ -1,29 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Lottie from "react-lottie";
-import burgerMenu from "../../assets/lotties/burgerMenu.json";
+import burgerMenu from "../../assets/lotties/burger-menu.json";
 import {
   Nav,
   BrandLogoContainer,
   NavItemsContainer,
   StyledLink,
   MenuMobileIcon,
-  Contacts
+  Contacts,
 } from "../../styles/components/Navbar.styled";
 
 // IDEE PAGE SKILLS : Créér API avec Next + petit jeu avec random skills
 // Ou prendre modéle jeu formation et faire bouger les logos des skills
 
 export default function Navbar() {
-
   const defaultOptions = {
-    loop: true,
+    loop: false,
     autoplay: false,
     animationData: burgerMenu,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  const [sequence, setSequence] = useState(false);
 
   return (
     <Nav>
@@ -52,8 +53,15 @@ export default function Navbar() {
         </Link>
       </NavItemsContainer>
       <MenuMobileIcon>
-        {/* <Lottie options={defaultOptions} width={50} height={50} /> */}
-        Icon
+        <Lottie
+          onClick={() => setSequence(console.log("yo"))}
+          options={defaultOptions}
+          width={30}
+          height={30}
+          isStopped={sequence}
+          isClickToPauseDisabled={true}
+          style={{margin: "0"}}
+        />
       </MenuMobileIcon>
     </Nav>
   );

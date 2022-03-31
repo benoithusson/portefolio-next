@@ -18,7 +18,9 @@ export const BrandLogoContainer = styled.div`
   width: 40%;
   height: 100%;
   background-color: red;
-  transition: all 0.4s ease;
+  span {
+    display: none;
+  }
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
@@ -37,6 +39,7 @@ export const NavItemsContainer = styled.div`
 
 export const MenuMobileIcon = styled.div`
   display: none;
+  background-color: greenyellow;
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
@@ -44,7 +47,6 @@ export const MenuMobileIcon = styled.div`
     width: 100%;
     height: 100%;
   }
-  background-color: green;
 `;
 
 export const StyledLink = styled.a`
