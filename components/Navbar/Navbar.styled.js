@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// TODO : Convert PX to REM
+
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
@@ -88,7 +90,4 @@ export const Contacts = styled.span`
     display: block;
   }
 `;
-// Quand je fais hover sur BrandLogoContainer, je veux activer style hover dans Contacts
-// Mais avec stled components, comment cibler un autre composant dans un comppsant?
-// Puis je utiliser du SCSS ?
-// Déclencher apparaition composant en cliquant sur un autre composant
+

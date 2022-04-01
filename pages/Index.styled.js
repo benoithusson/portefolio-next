@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// TODO : Convert PX to REM
+
 export const PageContainer = styled.div`
   display: flex;
   align-items: center;
@@ -55,5 +57,15 @@ export const Bloc = styled.div`
     p {
       text-align: center;
     }
+  }
+`;
+
+export const MenuMobile = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: grey;
   }
 `;

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// TODO : Convert PX to REM
+
 export const FooterContainer = styled.footer`
   position: absolute;
   botton: 0;

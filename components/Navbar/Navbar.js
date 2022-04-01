@@ -1,35 +1,20 @@
-import React, { createRef, useState } from "react";
+// import Lottie from "react-lottie";
+// import burgerMenu from "../../assets/lotties/burger-menu.json";
+import React from "react";
 import Link from "next/link";
-import Lottie from "react-lottie";
-import burgerMenu from "../../assets/lotties/burger-menu.json";
 import {
   Nav,
   BrandLogoContainer,
   NavItemsContainer,
   StyledLink,
   MenuMobileIcon,
-  Contacts,
-} from "../../styles/components/Navbar.styled";
+} from "./Navbar.styled";
 
-export default function Navbar() {
-
-  const defaultOptions = {
-    loop: false,
-    autoplay: false,
-    animationData: burgerMenu,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const [animation, setAnimation] = useState(false);
+export default function Navbar(props) {
 
   return (
     <Nav>
-      <BrandLogoContainer>
-        Benoît
-        <span>Mes coordonnées</span>
-      </BrandLogoContainer>
+      <BrandLogoContainer>Benoît</BrandLogoContainer>
       <NavItemsContainer>
         <Link href="/">
           <StyledLink>Home</StyledLink>
@@ -50,14 +35,8 @@ export default function Navbar() {
           <StyledLink>Dark Mode</StyledLink>
         </Link>
       </NavItemsContainer>
-      <MenuMobileIcon onClick={() => setAnimation(!animation)}>
-        <Lottie
-          options={defaultOptions}
-          width={30}
-          height={30}
-          isStopped={animation}
-          style={{margin: '0'}}
-        />
+      <MenuMobileIcon>
+        <button onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}>Click</button>
       </MenuMobileIcon>
     </Nav>
   );
