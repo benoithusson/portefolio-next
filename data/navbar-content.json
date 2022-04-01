@@ -1,0 +1,28 @@
+{
+    "navbarContent": [
+      {
+        "title": "Home",
+        "href": "/home"
+      },
+      {
+        "title": "About",
+        "href": "/about"
+      },
+      {
+        "title": "Skills",
+        "href": "/skills"
+      },
+      {
+        "title": "Portefolio",
+        "href": "/href"
+      },
+      {
+        "title": "Contact me",
+        "href": "/contact-me"
+      },
+      {
+        "title": "Dark mode",
+        "href": "#"
+      }
+    ]
+  }
