@@ -1,8 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 import { ModalNavMobile } from "./Modal.styled";
-import { ButtonMobile } from "../../styles/generic-styled-components";
+import {
+  ButtonMobile,
+  StyledLink,
+} from "../../styles/generic-styled-components";
 import svgCloseMenuIcon from "../../assets/images/icon-close.svg";
+import modaleContent from "../../data/nav-content.json";
 
 export default function Modal(props) {
   return (
@@ -18,6 +24,13 @@ export default function Modal(props) {
           alt="Icon to close navigation on mobile"
         />
       </ButtonMobile>
+      <ul>
+        {modaleContent.content.map((element) => (
+          <Link href={element.href} key={uuidv4()} passHref>
+            <StyledLink>{element.title}</StyledLink>
+          </Link>
+        ))}
+      </ul>
     </ModalNavMobile>
   );
 }
