@@ -3,14 +3,18 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { v4 as uuidv4 } from "uuid";
+
 import svgMenuIcon from "../../assets/images/icon-menu.svg";
-import navBar from "../../data/navbar-content.json";
-import { ButtonMobile } from "../../styles/generic-styled-components";
+import navBarContent from "../../data/nav-content.json";
+import {
+  ButtonMobile,
+  StyledLink,
+} from "../../styles/generic-styled-components";
 import {
   Nav,
   BrandLogoContainer,
   NavItemsContainer,
-  StyledLink,
   MenuMobileIcon,
 } from "./Navbar.styled";
 
@@ -19,9 +23,9 @@ export default function Navbar(props) {
     <Nav>
       <BrandLogoContainer>Benoît</BrandLogoContainer>
       <NavItemsContainer>
-        {navBar.navbarContent.map((content) => (
-          <Link href={content.href} passHref>
-            <StyledLink>{content.title}</StyledLink>
+        {navBarContent.content.map((element) => (
+          <Link href={element.href} key={uuidv4()} passHref>
+            <StyledLink>{element.title}</StyledLink>
           </Link>
         ))}
       </NavItemsContainer>
@@ -41,3 +45,5 @@ export default function Navbar(props) {
     </Nav>
   );
 }
+
+// Why passHref ? --> https://nextjs.org/docs/api-reference/next/link#if-the-child-is-a-custom-component-that-wraps-an-a-tag
