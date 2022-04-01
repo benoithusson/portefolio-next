@@ -10,10 +10,10 @@ export const ModalNavMobile = styled.div`
 @media (max-width: 768px) {
   display: block;
   opacity: 1;
-  height: 200vh;
-  width: 100%;
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   z-index: 5;
   background-color: orange;
