@@ -2,7 +2,7 @@
     "content": [
       {
         "title": "Home",
-        "href": "/home"
+        "href": "/"
       },
       {
         "title": "About",
@@ -14,7 +14,7 @@
       },
       {
         "title": "Portefolio",
-        "href": "/href"
+        "href": "/portefolio"
       },
       {
         "title": "Contact me",
@@ -22,7 +22,7 @@
       },
       {
         "title": "Dark mode",
-        "href": "#"
+        "href": ""
       }
     ]
   }

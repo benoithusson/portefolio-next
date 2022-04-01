@@ -11,6 +11,7 @@ import svgCloseMenuIcon from "../../assets/images/icon-close.svg";
 import modaleContent from "../../data/nav-content.json";
 
 export default function Modal(props) {
+
   return (
     <ModalNavMobile stateNavMobile={props.stateNavMobile}>
       <ButtonMobile
@@ -26,7 +27,13 @@ export default function Modal(props) {
       </ButtonMobile>
       <ul>
         {modaleContent.content.map((element) => (
-          <Link href={element.href} key={uuidv4()} passHref>
+          <Link
+            href={element.href}
+            key={uuidv4()}
+            passHref
+            // Hide modal when I click on a link
+            onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}
+          >
             <StyledLink>{element.title}</StyledLink>
           </Link>
         ))}
