@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import svgMenuIcon from "../../assets/images/icon-menu.svg";
+import navBar from "../../data/navbar-content.json";
 import { ButtonMobile } from "../../styles/generic-styled-components";
 import {
   Nav,
@@ -18,24 +19,11 @@ export default function Navbar(props) {
     <Nav>
       <BrandLogoContainer>Benoît</BrandLogoContainer>
       <NavItemsContainer>
-        <Link href="/">
-          <StyledLink>Home</StyledLink>
-        </Link>
-        <Link href="/about">
-          <StyledLink>About</StyledLink>
-        </Link>
-        <Link href="/skills">
-          <StyledLink>Skills</StyledLink>
-        </Link>
-        <Link href="/portefolio">
-          <StyledLink>Portefolio</StyledLink>
-        </Link>
-        <Link href="/contact-me">
-          <StyledLink>Contact me</StyledLink>
-        </Link>
-        <Link href="/">
-          <StyledLink>Dark Mode</StyledLink>
-        </Link>
+        {navBar.navbarContent.map((content) => (
+          <Link href={content.href} passHref>
+            <StyledLink>{content.title}</StyledLink>
+          </Link>
+        ))}
       </NavItemsContainer>
       <MenuMobileIcon>
         <ButtonMobile
