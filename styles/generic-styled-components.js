@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const ButtonMobile = styled.button`
   border: none;
   background-color: transparent;
+  img {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const StyledLink = styled.a`
@@ -32,6 +36,8 @@ export const StyledLink = styled.a`
     transform: scaleX(1);
   }
   @media (max-width: 768px) {
+    line-height: 50px;
+    color: white;
     &::before {
       display: none;
     }

@@ -2,23 +2,23 @@
     "content": [
       {
         "title": "Home",
-        "href": "/"
+        "href": ""
       },
       {
         "title": "About",
-        "href": "/about"
+        "href": "about"
       },
       {
         "title": "Skills",
-        "href": "/skills"
+        "href": "skills"
       },
       {
         "title": "Portefolio",
-        "href": "/portefolio"
+        "href": "portefolio"
       },
       {
         "title": "Contact me",
-        "href": "/contact-me"
+        "href": "contact-me"
       },
       {
         "title": "Dark mode",

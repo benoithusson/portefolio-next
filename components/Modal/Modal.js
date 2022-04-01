@@ -7,18 +7,17 @@ import {
   ButtonMobile,
   StyledLink,
 } from "../../styles/generic-styled-components";
-import svgCloseMenuIcon from "../../assets/images/icon-close.svg";
-import modaleContent from "../../data/components/nav-content.json";;
+import closeIcon from "../../assets/images/close-icon-white.png";
+import modaleContent from "../../data/components/nav-content.json";
 
 export default function Modal(props) {
-
   return (
     <ModalNavMobile stateNavMobile={props.stateNavMobile}>
       <ButtonMobile
         onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}
       >
         <Image
-          src={svgCloseMenuIcon}
+          src={closeIcon}
           width={40}
           height={40}
           layout="fixed"
@@ -28,10 +27,11 @@ export default function Modal(props) {
       <ul>
         {modaleContent.content.map((element) => (
           <Link
-            href={element.href}
+            href={`/${element.href}`}
             key={uuidv4()}
             passHref
-            // Hide modal when I click on a link
+            // How to hide modal when I click on a link ?
+            // Resolve bug display modal mobile into dev tools
             onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}
           >
             <StyledLink>{element.title}</StyledLink>

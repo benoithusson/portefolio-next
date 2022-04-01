@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
-import svgMenuIcon from "../../assets/images/icon-menu.svg";
+import hamburgerIcon from "../../assets/images/hamburger-icon-white.png";
 import navBarContent from "../../data/components/nav-content.json";
 import {
   ButtonMobile,
@@ -33,8 +33,13 @@ export default function Navbar(props) {
         <ButtonMobile
           onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}
         >
+          {/*
+          Essayer cette solution
+          https://github.com/vercel/next.js/discussions/20993
+
+          */}
           <Image
-            src={svgMenuIcon}
+            src={hamburgerIcon}
             width={40}
             height={40}
             layout="fixed"
