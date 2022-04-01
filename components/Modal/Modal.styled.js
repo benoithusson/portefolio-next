@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ModalNavMobile = styled.div`
+  display: none;
   @media (max-width: 768px) {
     display: block;
     position: absolute;
