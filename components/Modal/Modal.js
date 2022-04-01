@@ -8,7 +8,7 @@ import {
   StyledLink,
 } from "../../styles/generic-styled-components";
 import svgCloseMenuIcon from "../../assets/images/icon-close.svg";
-import modaleContent from "../../data/nav-content.json";
+import modaleContent from "../../data/components/nav-content.json";;
 
 export default function Modal(props) {
 

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
 import svgMenuIcon from "../../assets/images/icon-menu.svg";
-import navBarContent from "../../data/nav-content.json";
+import navBarContent from "../../data/components/nav-content.json";
 import {
   ButtonMobile,
   StyledLink,
