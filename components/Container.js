@@ -8,12 +8,10 @@ export default function Container(props) {
   return (
     <>
     {/* How to cover the entire screen with the modal ? */}
-      {props.stateNavMobile && (
-        <Modal
-          changeStateNavMobile={props.setStateNavMobile}
-          stateNavMobile={props.stateNavMobile}
-        ></Modal>
-      )}
+      <Modal
+        changeStateNavMobile={props.setStateNavMobile}
+        stateNavMobile={props.stateNavMobile}
+      ></Modal>
       <div style={{ position: "relative" }}>
         <Navbar
           changeStateNavMobile={props.setStateNavMobile}

@@ -5,7 +5,7 @@ import svgCloseMenu from '../../assets/images/icon-close.svg';
 
 export default function Modal(props) {
   return (
-    <ModalNavMobile>
+    <ModalNavMobile stateNavMobile={props.stateNavMobile}>
       <button onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}>
         <Image src={svgCloseMenu} width={20} height={20} layout="fixed" alt="Icon to close navigation on mobile" />
       </button>

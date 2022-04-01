@@ -17,5 +17,7 @@ export const ModalNavMobile = styled.div`
   left: 0;
   z-index: 5;
   background-color: orange;
+  transform: ${(props) => props.stateNavMobile ? 'translateX(0)': 'translateX(100%)'};
+  transition: transform 200ms ease-in-out;
 }
 `;
