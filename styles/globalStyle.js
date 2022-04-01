@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Ubuntu', 'Source Sans Pro', sans-serif;
         background-color: skyblue;
+        overflow: ${(props) => props.stateNavMobile ? 'hidden' : undefined};
     }
 `;
 
