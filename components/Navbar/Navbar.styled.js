@@ -61,6 +61,7 @@ export const StyledLink = styled.a`
   text-decoration: none;
   position: relative;
   background-color: none;
+  color: black;
   transition: background-color 0.3s ease;
   &::before {
     content: "";
