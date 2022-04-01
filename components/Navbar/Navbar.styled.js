@@ -55,14 +55,13 @@ export const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100%;
   height: 100%;
   margin: 0 20px 0 20px;
-  text-decoration: none;
-  position: relative;
   background-color: none;
   color: black;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
   &::before {
     content: "";
     position: absolute;
