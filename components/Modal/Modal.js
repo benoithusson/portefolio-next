@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { ModalNavMobile } from "./Modal.styled";
-import {
-  ButtonMobile,
-  StyledLink,
-} from "../../styles/generic-styled-components";
+import { ButtonMobile, StyledLink} from "../../styles/generic-styled-components";
 import closeIcon from "../../assets/images/close-icon-white.png";
 import modaleContent from "../../data/components/nav-content.json";
+import { NavMobileContext } from "../../helper/Context";
 
-export default function Modal(props) {
+export default function Modal() {
+
+  // Step 4) Into the child component...
+  // import useContext hook
+  // pass the context in order to access the state and setState function
+  // Use the state and setState function into our component
+  const {stateNavMobile, setStateNavMobile} = useContext(NavMobileContext);
+
   return (
-    <ModalNavMobile stateNavMobile={props.stateNavMobile}>
+    <ModalNavMobile>
       <ButtonMobile
-        onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}
+        onClick={() => setStateNavMobile(!stateNavMobile)}
       >
         <Image
           src={closeIcon}
@@ -30,11 +35,13 @@ export default function Modal(props) {
             href={`/${element.href}`}
             key={uuidv4()}
             passHref
-            // How to hide modal when I click on a link ?
-            // Resolve bug display modal mobile into dev tools
-            onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}
+            // TODO : Resolve bug display modal mobile into dev tools
           >
-            <StyledLink>{element.title}</StyledLink>
+            <StyledLink
+              onClick={() => setStateNavMobile(!stateNavMobile)}
+            >
+              {element.title}
+            </StyledLink>
           </Link>
         ))}
       </ul>

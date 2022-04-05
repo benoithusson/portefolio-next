@@ -1,12 +1,12 @@
-// import Lottie from "react-lottie";
-// import burgerMenu from "../../assets/lotties/burger-menu.json";
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
 import hamburgerIcon from "../../assets/images/hamburger-icon-white.png";
 import navBarContent from "../../data/components/nav-content.json";
+import { NavMobileContext } from "../../helper/Context";
+
 import {
   ButtonMobile,
   StyledLink,
@@ -18,7 +18,10 @@ import {
   MenuMobileIcon,
 } from "./Navbar.styled";
 
-export default function Navbar(props) {
+export default function Navbar() {
+
+  const {stateNavMobile, setStateNavMobile} = useContext(NavMobileContext);
+
   return (
     <Nav>
       <BrandLogoContainer>Benoît</BrandLogoContainer>
@@ -31,7 +34,7 @@ export default function Navbar(props) {
       </NavItemsContainer>
       <MenuMobileIcon>
         <ButtonMobile
-          onClick={() => props.changeStateNavMobile(!props.stateNavMobile)}
+          onClick={() => setStateNavMobile(!stateNavMobile)}
         >
           {/*
           Essayer cette solution
