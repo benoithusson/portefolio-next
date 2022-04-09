@@ -6,15 +6,9 @@ import Modal from "../components/Modal/Modal";
 export default function Container(props) {
   return (
     <>
-      <Modal
-        changeStateNavMobile={props.setStateNavMobile}
-        stateNavMobile={props.stateNavMobile}
-      ></Modal>
+      <Modal />
       <div style={{ position: "relative" }}>
-        <Navbar
-          changeStateNavMobile={props.setStateNavMobile}
-          stateNavMobile={props.stateNavMobile}
-        />
+        <Navbar />
         {props.children}
         <Footer />
       </div>

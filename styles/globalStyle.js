@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         font-family: 'Ubuntu', 'Source Sans Pro', sans-serif;
-        background-color: skyblue;
+        background-color: green;
         overflow: ${(props) => props.stateNavMobile ? 'hidden' : undefined};
     }
 `;

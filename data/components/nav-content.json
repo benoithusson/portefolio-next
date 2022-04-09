@@ -1,0 +1,28 @@
+{
+    "content": [
+      {
+        "title": "Home",
+        "href": ""
+      },
+      {
+        "title": "About",
+        "href": "about"
+      },
+      {
+        "title": "Skills",
+        "href": "skills"
+      },
+      {
+        "title": "Portefolio",
+        "href": "portefolio"
+      },
+      {
+        "title": "Contact me",
+        "href": "contact-me"
+      },
+      {
+        "title": "Dark mode",
+        "href": ""
+      }
+    ]
+  }

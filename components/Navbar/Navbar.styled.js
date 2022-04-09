@@ -51,34 +51,6 @@ export const MenuMobileIcon = styled.div`
   }
 `;
 
-export const StyledLink = styled.a`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  margin: 0 20px 0 20px;
-  text-decoration: none;
-  position: relative;
-  background-color: none;
-  transition: background-color 0.3s ease;
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 128);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  &:hover::before {
-    transform: scaleX(1);
-  }
-`;
-
 export const Contacts = styled.span`
   width: 100%;
   background-color: green;
@@ -90,4 +62,3 @@ export const Contacts = styled.span`
     display: block;
   }
 `;
-

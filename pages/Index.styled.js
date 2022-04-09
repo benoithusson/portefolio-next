@@ -59,13 +59,3 @@ export const Bloc = styled.div`
     }
   }
 `;
-
-export const MenuMobile = styled.div`
-  display: none;
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100vh;
-    display: block;
-    background-color: grey;
-  }
-`;

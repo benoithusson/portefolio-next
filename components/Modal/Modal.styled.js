@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ModalNavMobile = styled.div`
+  display: none;
   @media (max-width: 768px) {
     display: block;
     position: absolute;
@@ -10,7 +11,7 @@ export const ModalNavMobile = styled.div`
     left: 0;
     z-index: 5;
     opacity: 1;
-    background-color: orange;
+    background-color: rgba(0, 0, 128);
     transform: ${(props) =>
       props.stateNavMobile ? "translateX(0)" : "translateX(100%)"};
     transition: transform 200ms ease-in-out;
