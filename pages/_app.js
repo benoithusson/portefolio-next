@@ -10,14 +10,12 @@ function MyApp({ Component, pageProps }) {
   // When I click on hamburger icon, stateNavMobile changed
   // So useContext works
   // But why Modal is not displayed ?
-  console.log(stateNavMobile);
+  console.log("APP.JS", stateNavMobile);
 
   return (
     // Step 3) Create the context provider + pass stateNavMobile and setState function
     <NavMobileContext.Provider value={{stateNavMobile, setStateNavMobile}}>
       <Container>
-        {/* How to use context into GlobalStyles ?
-        */}
         <GlobalStyle stateNavMobile={stateNavMobile} />
         <Component {...pageProps} />
       </Container>

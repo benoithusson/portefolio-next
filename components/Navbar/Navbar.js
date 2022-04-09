@@ -19,8 +19,8 @@ import {
 } from "./Navbar.styled";
 
 export default function Navbar() {
-
-  const {stateNavMobile, setStateNavMobile} = useContext(NavMobileContext);
+  const { stateNavMobile, setStateNavMobile } = useContext(NavMobileContext);
+  console.log("Navbar", stateNavMobile);
 
   return (
     <Nav>
@@ -33,9 +33,7 @@ export default function Navbar() {
         ))}
       </NavItemsContainer>
       <MenuMobileIcon>
-        <ButtonMobile
-          onClick={() => setStateNavMobile(!stateNavMobile)}
-        >
+        <ButtonMobile onClick={() => setStateNavMobile(!stateNavMobile)}>
           {/*
           Essayer cette solution
           https://github.com/vercel/next.js/discussions/20993
