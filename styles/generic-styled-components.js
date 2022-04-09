@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const ButtonMobile = styled.button`
+  width: 100%;
+  padding: 20px 40px 20px 0;
+  height: auto;
   border: none;
   background-color: transparent;
+  text-align: right;
   img {
     width: 40px;
     height: 40px;
@@ -36,8 +40,10 @@ export const StyledLink = styled.a`
     transform: scaleX(1);
   }
   @media (max-width: 768px) {
-    line-height: 50px;
+    margin-top: 20px;
     color: white;
+    background-color: rgba(255,255,255, 0.1);
+    line-height: 50px;
     &::before {
       display: none;
     }

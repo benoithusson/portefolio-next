@@ -20,7 +20,6 @@ import {
 
 export default function Navbar() {
   const { stateNavMobile, setStateNavMobile } = useContext(NavMobileContext);
-  console.log("Navbar", stateNavMobile);
 
   return (
     <Nav>
