@@ -4,7 +4,7 @@ import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
 import hamburgerIcon from "../../assets/images/hamburger-icon-white.png";
-import navBarContent from "../../data/components/nav-content.json";
+import navBarContent from "../../data/nav-content.json";
 import { NavMobileContext } from "../../helper/Context";
 
 import {

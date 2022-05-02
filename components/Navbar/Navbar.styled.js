@@ -8,6 +8,7 @@ export const Nav = styled.nav`
   height: 80px;
   background-color: ${(props) => props.bgColor || "white"};
   padding: 0 150px 0 150px;
+  border-bottom: 1px solid rgba(192,192,192, 0.3);
   @media (max-width: 768px) {
     padding: 0 40px 0 40px;
   }
@@ -19,7 +20,7 @@ export const BrandLogoContainer = styled.div`
   justify-content: flex-start;
   width: 40%;
   height: 100%;
-  background-color: red;
+  // background-color: red;
   span {
     display: none;
   }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
+// import { ReactComponent as GitHubLogo } from "../assets/images/github-logo.svg";
 
 // TODO : Convert PX to REM
-
 export const PageContainer = styled.div`
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@ export const PageContainer = styled.div`
   position: relative;
   padding: ${(props) => props.padding || "100px 150px 100px 150px"};
   min-height: 100vh;
-  background-color: salmon;
+  // background-color: salmon;
   @media (max-width: 768px) {
     padding: 0 40px 0 40px;
   }
@@ -19,7 +19,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: ${(props) => props.justifyContent || "flex-start"};
   flex-direction: ${(props) => (props.column ? "column" : "row")};
-  background-color: skyblue;
+  // background-color: skyblue;
   min-height: 40vh;
   width: 100%;
   @media (max-width: 768px) {
@@ -35,8 +35,8 @@ export const Bloc = styled.div`
   align-items: ${(props) => props.alignItems || "flex-start"};
   flex-grow: ${(props) => props.flexGrow || "1"};
   margin: ${(props) => props.margin || "0 20px 0 0"};
+  padding: ${(props) => props.padding || "0"};
   background-color: ${(props) => props.bgColor || "white"};
-
   li {
     list-style-type: none;
     line-height: 60px;
@@ -49,6 +49,10 @@ export const Bloc = styled.div`
     display: inline-block;
   }
 
+  p {
+    line-height: 25px;
+  }
+
   @media (max-width: 768px) {
     margin: 0 0 50px 0;
     width: 100%;
@@ -56,6 +60,13 @@ export const Bloc = styled.div`
 
     p {
       text-align: center;
+      line-height: 25px;
     }
   }
 `;
+
+// const StyledSvg = styled(GitHubLogo)`
+//   fill: red;
+//   width: 100px;
+//   height: 100px;
+// `;

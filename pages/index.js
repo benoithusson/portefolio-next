@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Head from "next/head";
-import { PageContainer, Bloc, Container } from "./Index.styled";
+import photoIdBenoit from '../assets/images/photo-id-benoit.jpg';
+import { PageContainer, Bloc, Container, StyledSvg } from "./Index.styled";
 
 export default function Home() {
   return (
@@ -10,9 +12,13 @@ export default function Home() {
         <Head>
           <title>Portefolio Benoît Thiennard Husson Desmartin</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,300;0,500;0,700;1,300;1,300;1,500;1,700&display=swap"
             rel="stylesheet"
           />
         </Head>
@@ -21,17 +27,23 @@ export default function Home() {
             <ul>
               <li>
                 <Link href="/">
-                  <a>Lien 1</a>
+                  <>
+                    <a>Lien 1</a>
+                  </>
                 </Link>
               </li>
               <li>
                 <Link href="/">
-                  <a>Lien 2</a>
+                  <>
+                    <a>Lien 2</a>
+                  </>
                 </Link>
               </li>
               <li>
                 <Link href="/">
-                  <a>Lien 3</a>
+                  <>
+                    <a>Lien 3</a>
+                  </>
                 </Link>
               </li>
             </ul>
@@ -41,10 +53,11 @@ export default function Home() {
             <br />
             <h3>Frontend developer</h3>
             <br />
-            <p>Experience in Frontend development, UX and Motion Design.</p>
+            <p>Experience in Frontend development,<br/>UX and Motion Design.</p>
+            <button>Contact Me</button>
           </Bloc>
-          <Bloc flexGrow="4" alignItems="center">
-            <h2>PHOTO</h2>
+          <Bloc flexGrow="4" alignItems="flex-start">
+            <Image src={photoIdBenoit} width="400" height="400" id="test" />
           </Bloc>
         </Container>
       </PageContainer>

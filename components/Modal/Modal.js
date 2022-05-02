@@ -8,7 +8,7 @@ import {
   StyledLink,
 } from "../../styles/generic-styled-components";
 import closeIcon from "../../assets/images/close-icon-white.png";
-import modaleContent from "../../data/components/nav-content.json";
+import modaleContent from "../../data/nav-content.json";
 import { NavMobileContext } from "../../helper/Context";
 
 export default function Modal() {
