@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import photoIdBenoit from '../assets/images/photo-id-benoit.jpg';
-import { PageContainer, Bloc, Container, StyledSvg } from "./Index.styled";
+import { PageContainer, Bloc, Container } from "./Index.styled";
+import { Button } from "../styles/generic-styled-components";
 
 export default function Home() {
   return (
@@ -54,10 +55,10 @@ export default function Home() {
             <h3>Frontend developer</h3>
             <br />
             <p>Experience in Frontend development,<br/>UX and Motion Design.</p>
-            <button>Contact Me</button>
+            <Button>Contact Me</Button>
           </Bloc>
           <Bloc flexGrow="4" alignItems="flex-start">
-            <Image src={photoIdBenoit} width="400" height="400" id="test" />
+            <Image src={photoIdBenoit} width="400" height="400" />
           </Bloc>
         </Container>
       </PageContainer>

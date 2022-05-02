@@ -13,6 +13,22 @@ export const ButtonMobile = styled.button`
   }
 `;
 
+export const Button = styled.button`
+  width: 180px;
+  height: 50px;
+  background-color: ${(props) => props.bgColor || 'rgba(0, 0, 128)' };
+  color: ${(props) => props.color || 'white' };
+  border-radius: 5px;
+  border: none;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+  :hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 128, 0.4);
+    color: rgba(0, 0, 128);
+  }
+`;
+
 export const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
